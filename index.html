@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="list-container">
+        <h1>Work List</h1>
+        <input type="text" id="new-item" placeholder="Insira uma tarefa">
+        <ul id="list-group">
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('new-item').addEventListener("keypress", function(event){check_KeyPress(event)})
+
+    function check_KeyPress(event) {
+        if (event.key == 'Enter' && event.target.value != ''){ 
+            handleSend(event.target)    // Chama handleSend passando o objeto DOM do input
+            event.target.value = ''     // Limpa a área de texto
+        }
+    }
+</script>
+<script src="script.js"></script>

@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+input {
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 15px;
+}
+
+/* #list-container = DIV que contém o título, o input e a lista não-ordenada correspondente aos valores guardados no array */
+#list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 0px;
+
+    min-width: 100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 50px;
+    
+    background-color: gold;
+    border: 1px dashed;
+    border-radius: 20px;
+}
+
+#list-container h1{
+border-bottom: 2px solid;
+}
+
+#list-container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+
+}
+
+#list-container li:first-of-type{
+    border-top: 2px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 15px;
+}
+
+#list-container li:last-of-type{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+}
+
+#list-container li{
+    width: 70%;
+    height: fit-content;
+    padding: 5px;
+    
+    background-color: rgb(150, 100, 255);
+    border-inline: 2px solid;
+    border-bottom: 2px solid;
+    list-style: none;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Modificações ao passar o mouse sobre cada item da lista */
+#list-container li:hover{
+    background-color: rgb(100, 50, 205);
+    cursor: pointer;
+    list-style: none;
+}
