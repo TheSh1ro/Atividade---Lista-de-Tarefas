@@ -3,6 +3,7 @@ let tarefa = []
 function handleSend(inputElement) {
     tarefa.push(inputElement.value)
     makeUL() // Renderiza a UL
+    document.getElementById('array-live').innerText = tarefa
 }
 
 function makeUL() {
@@ -23,4 +24,5 @@ function removeItem(event) {
     const arrayIndex = item.id.slice(4)
     tarefa.splice(arrayIndex, 1) // Remove o LI clicado e apaga o valor do mesmo dentro do array 'tarefa'
     makeUL() // Renderiza a UL
+    document.getElementById('array-live').innerText = tarefa
 }
